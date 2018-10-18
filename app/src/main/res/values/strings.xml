@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RiseAndSoar</string>
+    <string name="time_label">Time</string>
+    <string name="save_label">Save</string>
 </resources>

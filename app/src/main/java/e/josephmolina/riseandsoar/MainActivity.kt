@@ -33,6 +33,11 @@ class MainActivity : AppCompatActivity() {
         stop_alarm_button.setOnClickListener {
             stopAlarm(alarmReceiverIntent)
         }
+
+        button2.setOnClickListener {
+            val testIntent = Intent(context, NewAlarm::class.java)
+            startActivity(testIntent)
+        }
     }
 
     private fun createAlarm(alarmReceiverIntent: Intent) {
