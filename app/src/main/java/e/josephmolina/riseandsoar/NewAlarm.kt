@@ -10,7 +10,7 @@ import java.util.*
 
 class NewAlarm : AppCompatActivity() {
     private val calender = Calendar.getInstance()
-    private val dateFormat:SimpleDateFormat = SimpleDateFormat("hh:mm a", Locale.getDefault())
+    private val dateFormat: SimpleDateFormat = SimpleDateFormat("hh:mm a", Locale.getDefault())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +18,7 @@ class NewAlarm : AppCompatActivity() {
 
         displayCurrentAlarmTime()
         alarm_time.setOnClickListener {
-            val timeSetListener = TimePickerDialog.OnTimeSetListener{ timePicker, hour, minute ->
+            val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
                 setNewAlarmTime(hour, minute)
                 displayCurrentAlarmTime()
             }
@@ -31,7 +31,7 @@ class NewAlarm : AppCompatActivity() {
         alarm_time.text = dateFormat.format(calender.time)
     }
 
-    private fun setNewAlarmTime(hour: Int,  minute: Int) {
+    private fun setNewAlarmTime(hour: Int, minute: Int) {
         calender.set(Calendar.HOUR_OF_DAY, hour)
         calender.set(Calendar.MINUTE, minute)
     }
